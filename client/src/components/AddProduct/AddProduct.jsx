@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { X } from 'lucide-react'; // You can use any icon library, or SVG
+import { Link } from "react-router-dom";
+
 
 export default function AddProduct() {
   const [photos, setPhotos] = useState([]);
@@ -15,8 +17,20 @@ export default function AddProduct() {
   };
 
   return (
+    
     <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
-      <h1 className="text-2xl font-semibold mb-6 w-full max-w-4xl">Add New Product</h1>
+      {/* Header Section */}
+      <div className="w-full max-w-4xl flex justify-between items-center mb-6">
+        <h1 className="text-2xl font-semibold">Add New Product</h1>
+
+        {/* Back Button aligned to right */}
+        <Link to="/stock">
+          <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700">
+            Back
+          </button>
+        </Link>
+      </div>
+    
 
       <div className="bg-white rounded-lg shadow p-10 w-full max-w-4xl">
         {/* Upload Button */}

@@ -9,15 +9,15 @@ export default function OrdersList() {
   const [selectedStatuses, setSelectedStatuses] = useState([]);
 
   const orders = [
-    { id: "00001", name: "Chris Ashton", type: "Electronics", status: "Completed", address: "New York, USA" },
-    { id: "00002", name: "Rosie Todd", type: "Book & Stationary", status: "Processing", address: "Paris, France" },
-    { id: "00003", name: "Daniel Bryan", type: "Health & Medicine", status: "Rejected", address: "Berlin, Germany" },
-    { id: "00004", name: "Gilbert Smith", type: "Mobile & Phone", status: "Completed", address: "Toronto, Canada" },
-    { id: "00005", name: "Alan Cain", type: "Accessories", status: "Processing", address: "Sydney, Australia" },
-    { id: "00006", name: "Alfred Murray", type: "Health & Medicine", status: "Completed", address: "Tokyo, Japan" },
-    { id: "00007", name: "Maggie Sullivan", type: "Accessories", status: "Processing", address: "Delhi, India" },
-    { id: "00008", name: "Rosie Todd", type: "Health & Medicine", status: "On Hold", address: "Paris, France" },
-    { id: "00009", name: "Dollie Hines", type: "Book & Stationary", status: "In Transit", address: "Rome, Italy" },
+    { id: "00001", name: "Chris Ashton", email: "chris@example.com",phonenumber: "9876543210" ,type: "Electronics", status: "Completed", address: "New York, USA" },
+    { id: "00002", name: "Rosie Todd",email: "rosie@example.com" ,phonenumber: "9876543210" , type: "Book & Stationary", status: "Processing", address: "Paris, France" },
+    { id: "00003", name: "Daniel Bryan",email: "danile@example.com" ,phonenumber: "9876543210" , type: "Health & Medicine", status: "Rejected", address: "Berlin, Germany" },
+    { id: "00004", name: "Gilbert Smith",email: "gilbert@example.com" ,phonenumber: "9876543210" , type: "Mobile & Phone", status: "Completed", address: "Toronto, Canada" },
+    { id: "00005", name: "Alan Cain",email: "alan@example.com" ,phonenumber: "9876543210" , type: "Accessories", status: "Processing", address: "Sydney, Australia" },
+    { id: "00006", name: "Alfred Murray",email: "alfred@example.com" ,phonenumber: "9876543210" , type: "Health & Medicine", status: "Completed", address: "Tokyo, Japan" },
+    { id: "00007", name: "Maggie Sullivan",email: "maggie@example.com" ,phonenumber: "9876543210" , type: "Accessories", status: "Processing", address: "Delhi, India" },
+    { id: "00008", name: "Rosie Todd",email: "rosie@example.com" ,phonenumber: "9876543210" , type: "Health & Medicine", status: "On Hold", address: "Paris, France" },
+    { id: "00009", name: "Dollie Hines",email: "dollie@example.com" ,phonenumber: "9876543210" , type: "Book & Stationary", status: "In Transit", address: "Rome, Italy" },
   ];
 
   const statusColors = {
@@ -182,6 +182,8 @@ export default function OrdersList() {
             <tr className="bg-gray-100 text-gray-700 uppercase text-xs">
               <th className="p-5 text-left">ID</th>
               <th className="p-5 text-left">Name</th>
+              <th className="p-5 text-left">Email</th>
+              <th className="p-5 text-left">Phone Number</th>
               <th className="p-5 text-left">Type</th>
               <th className="p-5 text-left">Status</th>
               <th className="p-5 text-left">Address</th>
@@ -196,6 +198,8 @@ export default function OrdersList() {
                 >
                   <td className="p-5">{order.id}</td>
                   <td className="p-5 font-medium">{order.name}</td>
+                  <td className="p-5 font-medium">{order.email}</td>
+                  <td className="p-5 font-medium">{order.phonenumber}</td>
                   <td className="p-5">{order.type}</td>
                   <td className="p-5">
                     <span
